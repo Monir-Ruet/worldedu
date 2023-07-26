@@ -1,7 +1,6 @@
 "use client"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import MDEditor from '@uiw/react-md-editor';
-import { useTheme } from "next-themes";
+// import MDEditor from '@uiw/react-md-editor';
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
@@ -11,7 +10,6 @@ import { useEffect } from "react";
 
 
 const Editor = () => {
-    const theme = useTheme()
     const { editorText, title } = useEditorStore()
 
     useEffect(() => {
@@ -49,7 +47,7 @@ const Editor = () => {
                 }} />
             </TabsContent>
             <TabsContent value="preview" className="h-fit">
-                <div data-color-mode={theme.theme}>
+                <div>
                     <div className="wmde-markdown-var">
                         <h1 className="text-bold text-3xl">
                             {
@@ -57,9 +55,9 @@ const Editor = () => {
                             }
                         </h1>
                     </div>
-                    <MDEditor.Markdown className="dark:bg-background" source={editorText} rehypePlugins={[rehypeKatex]} remarkPlugins={
+                    {/* <MDEditor.Markdown className="dark:bg-background" source={editorText} rehypePlugins={[rehypeKatex]} remarkPlugins={
                         [remarkGfm, remarkMath]
-                    } />
+                    } /> */}
                 </div>
             </TabsContent>
         </Tabs>

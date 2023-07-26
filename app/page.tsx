@@ -9,6 +9,9 @@ export default async function Home() {
   } catch (err) {
   }
   return (
-    <MDXRemote source={x}></MDXRemote>
+    <div className="prose">
+
+      <MDXRemote source={x}></MDXRemote>
+    </div>
   )
 }
