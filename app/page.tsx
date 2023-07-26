@@ -23,7 +23,7 @@ export default function Home() {
     <div className="container mt-5">
       <div className=" md:flex md:flex-row md:justify-between items-center">
         <div className="flex flex-col w-full md:w-5/12">
-          <h1 className="text-4xl font-extrabold">Learn programming<br />for Free</h1>
+          <h1 className="text-2xl md:text-4xl font-extrabold">Learn programming<br />for Free</h1>
           <p>Learn to program with our beginner-friendly tutorials and examples. <span className="text-blue-600">Read tutorials, try
             examples, write code</span> and learn to program.
           </p>
@@ -38,7 +38,7 @@ export default function Home() {
       <div className="mt-10 block md:flex md:justify-between justify-center items-center">
         <div className="items-start">
           <div className="d-flex flex-column justify-content-center">
-            <h2 className="text-2xl font-bold">Choose what to learn</h2>
+            <h2 className="text-xl md:text-2xl  font-bold">Choose what to learn</h2>
             <p>Start learning the best programming languages.</p>
           </div>
         </div>
