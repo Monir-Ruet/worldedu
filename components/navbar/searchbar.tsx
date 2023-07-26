@@ -69,7 +69,7 @@ function Searchbar() {
                             {
                                 post.map((item, index) => {
                                     return (
-                                        <Link key={index} href={`post/${item.subject.title}/${item.titleId}`} onClick={() => {
+                                        <Link key={index} href={`/post/${item.subject.title}/${item.titleId}`} onClick={() => {
                                             setOpen(!open)
                                         }}><CommandItem>{item.title}</CommandItem></Link>
                                     )

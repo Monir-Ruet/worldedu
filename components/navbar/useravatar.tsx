@@ -23,7 +23,7 @@ import Link from "next/link"
 
 const logout = () => {
     cookie.remove('auth_token');
-    window.open(process.env.backend_url + "/auth/logout", "_self");
+    window.open(process.env.backend + "/auth/logout", "_self");
 };
 
 export default function Useravatar() {
