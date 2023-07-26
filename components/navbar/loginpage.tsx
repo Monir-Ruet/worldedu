@@ -22,13 +22,12 @@ import { toast, useToast } from '@/hooks/usetoast'
 import axiosClient from '@/lib/axiosClient'
 import cookie from 'js-cookie'
 
-const google = () => window.open(process.env.backend_url + '/auth/google', '_self')
-const github = () => window.open(process.env.backend_url + '/auth/github', '_self')
+const google = () => window.open(process.env.backend + '/auth/google', '_self')
+const github = () => window.open(process.env.backend + '/auth/github', '_self')
 
 
 
 export default function Login() {
-    const router = useRouter()
     const { toast } = useToast();
     const [Signupdata, setSignupdata] = useState({
         email: '',
