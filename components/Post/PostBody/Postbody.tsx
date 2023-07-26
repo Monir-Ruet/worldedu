@@ -4,7 +4,6 @@ import rehypeHighlight from 'rehype-highlight'
 import axiosClient from "@/lib/axiosServer";
 import { compileMDX } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
-import rehypePrettyCode from "rehype-pretty-code";
 
 interface PostBodyProps {
     className?: string,
@@ -25,7 +24,6 @@ const Postbody: React.FC<PostBodyProps> = async ({
                 rehypePlugins: [
                     rehypeKatex,
                     rehypeHighlight,
-                    rehypePrettyCode,
                 ],
                 remarkPlugins: [
                     remarkMath,
