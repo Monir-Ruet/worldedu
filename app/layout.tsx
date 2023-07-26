@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 
-
+import { ThemeProvider } from '@/provider/theme'
 import { Toaster } from "@/provider/toaster"
 import Navbar from '@/components/navbar/Navbar'
 import getuser from '@/lib/getuser'
@@ -40,12 +40,15 @@ export default async function RootLayout({
               <UseStoreInitializer name='' email='' image='' mobile_number='' isauthenticated={false} createdAt={new Date} updatedAt={new Date} />
             )
           }
-          <Navbar />
-          <div className="flex-1">
-            {children}
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Navbar />
+            <div className="flex-1">
+              {children}
 
-          </div>
-          <Toaster />
+            </div>
+            <Toaster />
+          </ThemeProvider>
+
           <Footer />
         </div>
       </body>

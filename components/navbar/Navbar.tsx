@@ -1,3 +1,4 @@
+import { ThemeToggle } from '@/components/navbar/themetoggle'
 import Searchbar from './searchbar'
 import Useravatar from './useravatar'
 import Link from 'next/link'
@@ -79,9 +80,9 @@ const Navbar = async () => {
 
                 <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
                     <Searchbar />
-                    {/* <div className='hover:cursor-pointer'>
+                    <div className='hover:cursor-pointer'>
                         <ThemeToggle />
-                    </div> */}
+                    </div>
                     <div className='hover:cursor-pointer'>
                         <Useravatar />
                     </div>
