@@ -93,11 +93,11 @@ export default function Login() {
                     </CardHeader>
                     <CardContent className="grid gap-4">
                         <div className="grid grid-cols-2 gap-6">
-                            <Button variant="outline" onClick={() => window.location.href = `https://ggztpz-5000.csb.app/auth/google`}>
+                            <Button variant="outline" onClick={() => window.location.href = `https://z6xw6x-5000.csb.app/auth/google`}>
                                 <FcGoogle className='mr-2 h-4 w-4' />
                                 Google
                             </Button>
-                            <Button variant="outline" onClick={() => window.location.href = `https://ggztpz-5000.csb.app/auth/google`}>
+                            <Button variant="outline" onClick={() => window.location.href = `https://z6xw6x-5000.csb.app/auth/google`}>
                                 <BsGithub className='mr-2 h-4 w-4' />
                                 Github
                             </Button>
