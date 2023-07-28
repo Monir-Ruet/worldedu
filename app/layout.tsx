@@ -24,13 +24,14 @@ export default async function RootLayout({
 }) {
 
   const fetchUser = async () => {
-    const response = await fetch(process.env.backend as string,
+    const response = await fetch(`${process.env.backend}/auth/getuser`,
       {
+        method: "post",
         credentials: 'include',
       });
   };
 
-  fetchUser();
+  await fetchUser();
   let user = await getuser();
   return (
     <html lang="en" suppressHydrationWarning>

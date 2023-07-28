@@ -21,8 +21,8 @@ import { toast, useToast } from '@/hooks/usetoast'
 import axiosClient from '@/lib/axiosClient'
 import cookie from 'js-cookie'
 
-const google = () => window.open(process.env.backend + '/auth/google', '_self')
-const github = () => window.open(process.env.backend + '/auth/github', '_self')
+const google = () => window.open('https://z6xw6x-5000.csb.app' + '/auth/google', '_self')
+const github = () => window.open('https://z6xw6x-5000.csb.app' + '/auth/github', '_self')
 
 
 
