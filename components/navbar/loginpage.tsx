@@ -21,6 +21,11 @@ import { toast, useToast } from '@/hooks/usetoast'
 import axiosClient from '@/lib/axiosClient'
 import cookie from 'js-cookie'
 
+const google = () => window.open(process.env.backend + '/auth/google', '_self')
+
+const github = () => window.open(process.env.backend + '/auth/github', '_self')
+
+
 
 export default function Login() {
     const { toast } = useToast();
@@ -93,11 +98,11 @@ export default function Login() {
                     </CardHeader>
                     <CardContent className="grid gap-4">
                         <div className="grid grid-cols-2 gap-6">
-                            <Button variant="outline" onClick={() => window.location.href = `https://z6xw6x-5000.csb.app/auth/google`}>
+                            <Button variant="outline" onClick={google}>
                                 <FcGoogle className='mr-2 h-4 w-4' />
                                 Google
                             </Button>
-                            <Button variant="outline" onClick={() => window.location.href = `https://z6xw6x-5000.csb.app/auth/google`}>
+                            <Button variant="outline" onClick={github}>
                                 <BsGithub className='mr-2 h-4 w-4' />
                                 Github
                             </Button>
@@ -144,11 +149,11 @@ export default function Login() {
                     </CardHeader>
                     <CardContent className="grid gap-4">
                         <div className="grid grid-cols-2 gap-6">
-                            <Button variant="outline" onClick={() => window.location.href = `https://ggztpz-5000.csb.app/auth/google`}>
+                            <Button variant="outline" onClick={google}>
                                 <FcGoogle className='mr-2 h-4 w-4' />
                                 Google
                             </Button>
-                            <Button variant="outline" onClick={() => window.location.href = 'https://z6xw6x-5000.csb.app/auth/google'}>
+                            <Button variant="outline" onClick={github}>
                                 <BsGithub className='mr-2 h-4 w-4' />
                                 Github
                             </Button>
