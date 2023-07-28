@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { cookies } from 'next/headers';
 const axiosServer = axios.create({
+    withCredentials: true,
     baseURL: process.env.backend,
-    withCredentials: true
 });
 
 axiosServer.interceptors.request.use(

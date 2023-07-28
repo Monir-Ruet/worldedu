@@ -81,16 +81,6 @@ export default function Login() {
             })
         }
     }
-    useEffect(() => {
-        const fetchUser = async () => {
-            const response = await fetch(process.env.backend as string,
-                {
-                    credentials: 'include',
-                });
-        };
-
-        fetchUser();
-    }, [])
     return (
         <Tabs defaultValue="login" className="w-full mt-4">
             <TabsList className="grid w-full grid-cols-2">

@@ -1,8 +1,8 @@
-import axiosClient from "./axiosServer"
+import axiosServer from "./axiosServer"
 import { useUserStore } from "@/zustand/store";
 const getuser = async () => {
     try {
-        const { data } = await axiosClient.post('auth/getuser');
+        const { data } = await axiosServer.post('auth/getuser');
         data.isauthenticated = true;
         useUserStore.setState(data);
         return data;

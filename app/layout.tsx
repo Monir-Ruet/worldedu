@@ -23,6 +23,14 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
 
+  const fetchUser = async () => {
+    const response = await fetch(process.env.backend as string,
+      {
+        credentials: 'include',
+      });
+  };
+
+  fetchUser();
   let user = await getuser();
   return (
     <html lang="en" suppressHydrationWarning>
