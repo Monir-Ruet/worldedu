@@ -16,13 +16,12 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "../ui/button"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { toast, useToast } from '@/hooks/usetoast'
 import axiosClient from '@/lib/axiosClient'
 import cookie from 'js-cookie'
 
 const google = () => window.open(process.env.backend + '/auth/google', '_self')
-
 const github = () => window.open(process.env.backend + '/auth/github', '_self')
 
 
@@ -82,6 +81,16 @@ export default function Login() {
             })
         }
     }
+    useEffect(() => {
+        const fetchUser = async () => {
+            const response = await fetch(process.env.backend as string,
+                {
+                    credentials: 'include',
+                });
+        };
+
+        fetchUser();
+    }, [])
     return (
         <Tabs defaultValue="login" className="w-full mt-4">
             <TabsList className="grid w-full grid-cols-2">
